@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetGuardAI.Masscan", "src\NetGuardAI.Masscan\NetGuardAI.Masscan.csproj", "{6DFED3E2-F3B3-4876-8FE2-3412E59002DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetGuardAI.Nmap", "src\NetGuardAI.Nmap\NetGuardAI.Nmap.csproj", "{20CE1C3A-A500-4979-BD13-9E968C3EFB3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{57FCA463-65EB-4138-B0F9-3262B489040B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".root", ".root", "{2A172026-6BD1-4818-A6BB-824A0E8DFFCE}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		init-hangfire-db.sql = init-hangfire-db.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetGuardAI.Sandbox", "src\NetGuardAI.Sandbox\NetGuardAI.Sandbox.csproj", "{C2C88A89-3CF5-42BD-8B4D-C4B2934518F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetGuardAI.App", "src\NetGuardAI.App\NetGuardAI.App.csproj", "{A57491F7-DBA8-46C5-8A2E-A7A6D127B644}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetGuardAI.Core", "src\NetGuardAI.Core\NetGuardAI.Core.csproj", "{57682B12-353D-44C2-A147-0B4A788DF723}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DFED3E2-F3B3-4876-8FE2-3412E59002DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DFED3E2-F3B3-4876-8FE2-3412E59002DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DFED3E2-F3B3-4876-8FE2-3412E59002DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DFED3E2-F3B3-4876-8FE2-3412E59002DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20CE1C3A-A500-4979-BD13-9E968C3EFB3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CE1C3A-A500-4979-BD13-9E968C3EFB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CE1C3A-A500-4979-BD13-9E968C3EFB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CE1C3A-A500-4979-BD13-9E968C3EFB3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2C88A89-3CF5-42BD-8B4D-C4B2934518F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C88A89-3CF5-42BD-8B4D-C4B2934518F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C88A89-3CF5-42BD-8B4D-C4B2934518F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C88A89-3CF5-42BD-8B4D-C4B2934518F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57491F7-DBA8-46C5-8A2E-A7A6D127B644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57491F7-DBA8-46C5-8A2E-A7A6D127B644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57491F7-DBA8-46C5-8A2E-A7A6D127B644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57491F7-DBA8-46C5-8A2E-A7A6D127B644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57682B12-353D-44C2-A147-0B4A788DF723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57682B12-353D-44C2-A147-0B4A788DF723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57682B12-353D-44C2-A147-0B4A788DF723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57682B12-353D-44C2-A147-0B4A788DF723}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6DFED3E2-F3B3-4876-8FE2-3412E59002DF} = {57FCA463-65EB-4138-B0F9-3262B489040B}
+		{20CE1C3A-A500-4979-BD13-9E968C3EFB3B} = {57FCA463-65EB-4138-B0F9-3262B489040B}
+		{C2C88A89-3CF5-42BD-8B4D-C4B2934518F0} = {57FCA463-65EB-4138-B0F9-3262B489040B}
+		{A57491F7-DBA8-46C5-8A2E-A7A6D127B644} = {57FCA463-65EB-4138-B0F9-3262B489040B}
+		{57682B12-353D-44C2-A147-0B4A788DF723} = {57FCA463-65EB-4138-B0F9-3262B489040B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NetGuardAI.Nmap/1.0.0": {
+        "runtime": {
+          "NetGuardAI.Nmap.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NetGuardAI.Nmap/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

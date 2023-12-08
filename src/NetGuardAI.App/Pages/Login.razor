@@ -1,0 +1,33 @@
+﻿@page "/login"
+@using NetGuardAI.App.Models
+@inject NavigationManager Nav
+
+<MudContainer MaxWidth="MaxWidth.Small" Class="pa-4">
+    <div class="pb-6">
+        <MudText Class="pb-4 title" Typo="Typo.h4">Entre no NetGuardAI</MudText>
+        <MudText Typo="Typo.body1">Insira suas credenciais abaixo</MudText>
+    </div>
+    <LoginForm/>
+</MudContainer>
+
+<style>
+    .title {
+        color: @(ThemeManager.IsDarkMode ? "white" : "black");
+        font-weight: bold;
+    }
+</style>
+
+@code {
+    [CascadingParameter(Name="ThemeManager")] public ThemeManagerModel ThemeManager { get; set; }
+    [CascadingParameter] protected Task<AuthenticationState> AuthenticationState { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        var user = (await AuthenticationState).User;
+        if (user.Identity is {IsAuthenticated: true })
+        {
+            Nav.NavigateTo("/");
+        }
+    }
+}

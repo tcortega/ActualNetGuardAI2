@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NetGuardAI.Sandbox/1.0.0": {
+        "dependencies": {
+          "NetGuardAI.Masscan": "1.0.0",
+          "NetGuardAI.Nmap": "1.0.0"
+        },
+        "runtime": {
+          "NetGuardAI.Sandbox.dll": {}
+        }
+      },
+      "NetGuardAI.Masscan/1.0.0": {
+        "runtime": {
+          "NetGuardAI.Masscan.dll": {}
+        }
+      },
+      "NetGuardAI.Nmap/1.0.0": {
+        "runtime": {
+          "NetGuardAI.Nmap.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NetGuardAI.Sandbox/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetGuardAI.Masscan/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetGuardAI.Nmap/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

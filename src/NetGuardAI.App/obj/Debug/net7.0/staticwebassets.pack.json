@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Projects\\.net\\NetGuardAI\\src\\NetGuardAI.App\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "E:\\Projects\\.net\\NetGuardAI\\src\\NetGuardAI.App\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Projects\\.net\\NetGuardAI\\src\\NetGuardAI.App\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "E:\\Projects\\.net\\NetGuardAI\\src\\NetGuardAI.App\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "E:\\Projects\\.net\\NetGuardAI\\src\\NetGuardAI.App\\wwwroot\\js\\apex-chart-wrapper.js",
+      "PackagePath": "staticwebassets\\js\\apex-chart-wrapper.js"
+    },
+    {
+      "Id": "E:\\Projects\\.net\\NetGuardAI\\src\\NetGuardAI.App\\wwwroot\\sample-data\\avatar.png",
+      "PackagePath": "staticwebassets\\sample-data\\avatar.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.NetGuardAI.App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.NetGuardAI.App.props",
+      "PackagePath": "build\\NetGuardAI.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.NetGuardAI.App.props",
+      "PackagePath": "buildMultiTargeting\\NetGuardAI.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.NetGuardAI.App.props",
+      "PackagePath": "buildTransitive\\NetGuardAI.App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,22 @@
+﻿@using NetGuardAI.Core.Persistence.Entities
+
+<div class="flex flex-row gap-2">
+    <MudNumericField @bind-Value="PortRange.FromPort" Required="true" Min="1" Max="65535" Label="Porta" Variant="Variant.Outlined" />
+    <MudNumericField @bind-Value="PortRange.ToPort" Min="1" Max="65535" Label="Porta" Variant="Variant.Outlined" />
+    <MudIconButton Icon="@Icons.Material.Filled.Delete" OnClick="HandleDelete" Variant="Variant.Text" Color="Color.Error" Size="Size.Medium"/>
+</div>
+
+@code {
+
+    [EditorRequired]
+    [Parameter]
+    public PortRange PortRange { get; set; } = null!;
+    
+    [Parameter]
+    public Action<PortRange>? OnDelete { get; set; }
+
+    void HandleDelete()
+    {
+        OnDelete?.Invoke(PortRange);
+    }
+}

@@ -1,0 +1,135 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = NetGuardAI.App
+build_property.RootNamespace = NetGuardAI.App
+build_property.ProjectDir = C:\Users\avery\Desktop\Projects\.net\NetGuardAI\src\NetGuardAI.App\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\avery\Desktop\Projects\.net\NetGuardAI\src\NetGuardAI.App
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Cards/DataCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJkc1xEYXRhQ2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Charts/ApexChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDaGFydHNcQXBleENoYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/CommentBubble.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21tZW50QnViYmxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Dialogs/ConfirmationDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWFsb2dzXENvbmZpcm1hdGlvbkRpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Forms/IPEntry.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xJUEVudHJ5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Forms/IPRangeForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xJUFJhbmdlRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Forms/LoginForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xMb2dpbkZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Forms/PortRangeEntry.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xQb3J0UmFuZ2VFbnRyeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Forms/PortRangeForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xQb3J0UmFuZ2VGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Forms/SettingsForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xTZXR0aW5nc0Zvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Forms/WebhookEntry.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xXZWJob29rRW50cnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Forms/WebhooksForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xXZWJob29rc0Zvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Shared/CommandPalette.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcQ29tbWFuZFBhbGV0dGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Shared/SideMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcU2lkZU1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Shared/Themes/ThemesButton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcVGhlbWVzXFRoZW1lc0J1dHRvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Shared/Themes/ThemesMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcVGhlbWVzXFRoZW1lc01lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Components/Shared/UserMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcVXNlck1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Pages/Settings.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Pages/Webhooks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2ViaG9va3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Shared/Redirects/LoginRedirect.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZGlyZWN0c1xMb2dpblJlZGlyZWN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avery/Desktop/Projects/.net/NetGuardAI/src/NetGuardAI.App/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

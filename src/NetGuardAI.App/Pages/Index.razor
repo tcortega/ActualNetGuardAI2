@@ -1,0 +1,66 @@
+﻿@using NetGuardAI.Core.Persistence
+@using NetGuardAI.Core.Persistence.Entities
+@using Microsoft.EntityFrameworkCore
+@using System.Globalization
+@using System.Text
+@using BlazorDownloadFile
+@inherits BlazorComponentBase
+@page "/"
+@attribute [Authorize]
+
+<PageTitle>Home</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.False">
+    @if (_scanResults is not null)
+    {
+        <MudTable Items="_scanResults" Hover="true">
+            <ToolBarContent>
+                <MudText Typo="Typo.h6">Resultados do Escaneamento</MudText>
+                <MudSpacer />
+                <MudTextField T="string" Placeholder="Buscar" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0" />
+            </ToolBarContent>
+            <HeaderContent>
+                <MudTh>Data</MudTh>
+                <MudTh>Endereço IP</MudTh>
+                <MudTh>Porta</MudTh>
+                <MudTh>Exportar</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>@context.ScanTime.ToString("dd 'de' MMM, yyyy 'às' HH:mm", CultureInfo.CurrentCulture)</MudTd>
+                <MudTd>@context.IpAddress</MudTd>
+                <MudTd>@context.Port</MudTd>
+                <MudTh><MudIconButton OnClick="@(() => OnDownload(context.ProcessedInfo))" Icon="@Icons.Material.Filled.Download" /></MudTh>
+            </RowTemplate>
+        </MudTable>
+    }
+</MudContainer>
+
+@code {
+    [InjectScoped]
+    public AppDbContext Context { get; set; } = null!;
+    
+    [CascadingParameter] private bool IsOverlayVisible { get; set; }
+
+    [Inject] IBlazorDownloadFileService BlazorDownloadFileService { get; set; } = null!;
+    
+    private List<ScanResult>? _scanResults;
+    
+    protected override async Task OnAfterRenderAsync(bool firstTime)
+    {
+        if (!firstTime) return;
+
+        IsOverlayVisible = true;
+        StateHasChanged();
+        _scanResults = await Context.ScanResults
+            .OrderByDescending(x => x.ScanTime)
+            .ToListAsync();
+        
+        IsOverlayVisible = false;
+        StateHasChanged();
+    }
+
+    private async Task OnDownload(string info)
+    {
+        await BlazorDownloadFileService.DownloadFileFromText("scan-info.json", info, Encoding.UTF8, contentType: "text-json", encoderShouldEmitIdentifier: false);
+    }
+}

@@ -1,0 +1,15 @@
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\bin\Debug\net7.0\NetGuardAI.Core.deps.json
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\bin\Debug\net7.0\NetGuardAI.Core.runtimeconfig.json
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\bin\Debug\net7.0\NetGuardAI.Core.dll
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\bin\Debug\net7.0\NetGuardAI.Core.pdb
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\NetGuardAI.Core.csproj.AssemblyReference.cache
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\NetGuardAI.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\NetGuardAI.Core.AssemblyInfoInputs.cache
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\NetGuardAI.Core.AssemblyInfo.cs
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\NetGuardAI.Core.csproj.CoreCompileInputs.cache
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\EFCoreNpgsqlNodaTime.cs
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\NetGuardAI.Core.dll
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\refint\NetGuardAI.Core.dll
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\NetGuardAI.Core.pdb
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\NetGuardAI.Core.genruntimeconfig.cache
+E:\Projects\.net\NetGuardAI\src\NetGuardAI.Core\obj\Debug\net7.0\ref\NetGuardAI.Core.dll

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoRegisterInject" Version="1.2.1" />
+      <PackageReference Include="Betalgo.OpenAI" Version="7.4.1" />
+      <PackageReference Include="Extensions.Hosting.AsyncInitialization" Version="3.0.0" />
+      <PackageReference Include="Hangfire.AspNetCore" Version="1.8.6" />
+      <PackageReference Include="Hangfire.PostgreSql" Version="1.20.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime" Version="7.0.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NetGuardAI.Masscan\NetGuardAI.Masscan.csproj" />
+      <ProjectReference Include="..\NetGuardAI.Nmap\NetGuardAI.Nmap.csproj" />
+    </ItemGroup>
+
+</Project>

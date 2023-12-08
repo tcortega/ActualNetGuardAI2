@@ -1,0 +1,15 @@
+﻿@page "/Webhooks"
+@attribute [Authorize]
+
+<PageTitle>Webhooks</PageTitle>
+
+<MudContainer Class="my-10" MaxWidth="MaxWidth.False">
+    <MudGrid>
+        <MudItem xs="12" md="12" lg="12">
+            <MudText Typo="Typo.h6">Webhooks</MudText>
+        </MudItem>
+        <MudItem xs="12" md="12" lg="12">
+            <WebhooksForm/>
+        </MudItem>
+    </MudGrid>
+</MudContainer>

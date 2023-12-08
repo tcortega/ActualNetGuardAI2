@@ -1,0 +1,57 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@using NetGuardAI.App.Auth
+@inject AuthenticationStateProvider Auth
+@inject NavigationManager Nav
+
+<MudForm @bind-IsValid="@_isValid">
+    <MudTextField T="string" Label="Usuário" Required="true" 
+                  @bind-Value="_username"
+                  Class="pb-4"
+                  RequiredError="O usuário é obrigatório!" 
+                  Variant="Variant.Outlined"/>
+    <MudTextField T="string" Label="Senha"
+                  @bind-Value="_password"
+                  Variant="Variant.Outlined"
+                  InputType="InputType.Password"
+                  Required="true"
+                  RequiredError="A senha é obrigatória!"/>
+    <div class="d-flex align-center pt-5">
+        <MudButton Size="Size.Large" Variant="Variant.Filled" 
+                   Color="Color.Primary" 
+                   Disabled="!_isValid" 
+                   Class="ml-auto mr-auto" 
+                   FullWidth="true" OnClick="LoginAsync">Login</MudButton>
+    </div>
+</MudForm>
+
+<style>
+    .mud-input-label {
+        background-color: var(--mud-palette-background)
+    }
+</style>
+
+@code {
+    [Inject] private ISnackbar Snackbar { get; set; }
+    [CascadingParameter] private bool IsOverlayVisible { get; set; }
+    
+    private bool _isValid;
+    private string _username;
+    private string _password;
+
+    private async Task LoginAsync()
+    {
+        IsOverlayVisible = true;
+        try
+        {
+            await ((CustomAuthenticationStateProvider) Auth).AuthenticateUser(_username, _password);
+            Nav.NavigateTo("/");
+        }
+        catch(Exception ex)
+        {
+            Snackbar.Add(ex.Message, Severity.Error);
+        }
+        IsOverlayVisible = false;
+    }
+}

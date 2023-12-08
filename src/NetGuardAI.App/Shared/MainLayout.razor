@@ -1,0 +1,39 @@
+﻿@inherits LayoutComponentBase
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+<MudThemeProvider Theme="@_theme"/>
+
+<MudLayout>
+    <MudOverlay @bind-Visible="_isOverlayVisible" DarkBackground="true" ZIndex="9999" AutoClose="true">
+        <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true"/>
+    </MudOverlay>
+
+    <AuthorizeView>
+        <NavMenu CanMiniSideMenuDrawer="_canMiniSideMenuDrawer"
+                 OpenCommandPalette="OpenCommandPalette"
+                 ThemeManager="_themeManager"
+                 ToggleSideMenuDrawer="ToggleSideMenuDrawer"/>
+
+        <SideMenu @bind-CanMiniSideMenuDrawer="_canMiniSideMenuDrawer"
+                  @bind-SideMenuDrawerOpen="_sideMenuDrawerOpen"/>
+    </AuthorizeView>
+    <ThemesMenu @bind-ThemingDrawerOpen="_themingDrawerOpen"
+                ThemeManager="_themeManager"
+                ThemeManagerChanged="ThemeManagerChanged"/>
+
+    <ThemesButton OnClick="@(() => _themingDrawerOpen = true)"/>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="mb-16 mt-4">
+            <CascadingValue Name="IsOverlayVisible" Value="@_isOverlayVisible">
+                <CascadingValue Name="ThemeManager" Value="_themeManager">
+                    @Body
+                </CascadingValue>
+            </CascadingValue>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = true;
+    private bool _isOverlayVisible = true;
+}

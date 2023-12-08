@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <LangVersion>default</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorDownloadFile" Version="2.4.0.2" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MudBlazor" Version="6.11.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
+  </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="wwwroot\sample-data\avatar.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Update="wwwroot\favicon.ico">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Update="wwwroot\js\apex-chart-wrapper.js">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Update="wwwroot\css\app.cs">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NetGuardAI.Core\NetGuardAI.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NetGuardAI.Core\NetGuardAI.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Components\Tickets\FabTicketActions.razor" />
+      <_ContentIncludedByDefault Remove="Components\Tickets\NewTicketTable.razor" />
+      <_ContentIncludedByDefault Remove="Components\Tickets\TabbedTicketTable.razor" />
+      <_ContentIncludedByDefault Remove="Components\Tickets\TicketActionsMenu.razor" />
+      <_ContentIncludedByDefault Remove="Components\Tickets\TicketComments.razor" />
+      <_ContentIncludedByDefault Remove="Components\Tickets\TicketInfo.razor" />
+      <_ContentIncludedByDefault Remove="Components\Tickets\TicketStatusBadge.razor" />
+      <_ContentIncludedByDefault Remove="Components\Tickets\TicketTable.razor" />
+      <_ContentIncludedByDefault Remove="Components\Tickets\ViewTicketInfoDialog.razor" />
+    </ItemGroup>
+
+</Project>

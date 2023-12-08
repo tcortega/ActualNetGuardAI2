@@ -1,0 +1,103 @@
+﻿@inherits BlazorComponentBase
+@using NetGuardAI.Core.Persistence
+@using NetGuardAI.Core.Persistence.Entities
+@using Microsoft.EntityFrameworkCore
+
+<MudPaper Class="p-6">
+    @if (_webhooks is null)
+    {
+        <div class="w-full h-4 p-16 mx-auto">
+            <MudProgressLinear Indeterminate="true"/>
+        </div>
+    }
+    else
+    {
+        <MudForm @ref="_form" @bind-IsValid="@_success">
+            <MudContainer Class="flex flex-col gap-4">
+                <MudButton OnClick="OnAdd" StartIcon="@Icons.Material.Filled.Add" Color="Color.Success" Variant="Variant.Outlined">
+                    Adicionar Webhook
+                </MudButton>
+                @if (_webhooks.Count == 0)
+                {
+                    <MudText Class="align-self">Nenhum webhook cadastrado...</MudText>
+                }
+                else
+                {
+                    foreach (var userWebhook in _webhooks)
+                    {
+                        <WebhookEntry Webhook="userWebhook" OnDelete="OnDelete"/>
+                    }
+                }
+
+                <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Disabled="@(!_success || _isLoading)" OnClick="SaveChanges">
+                   @if (_isLoading)
+                   {
+                       <MudProgressCircular Class="mr-2" Size="Size.Small" Indeterminate="true" />
+                   }
+                   Salvar
+                </MudButton>
+            </MudContainer>
+        </MudForm>
+    }
+</MudPaper>
+
+@code {
+    private bool _isLoading;
+    private List<UserWebhook>? _webhooks;
+    private List<UserWebhook> _webhooksToDelete = new();
+    private List<UserWebhook> _webhooksToAdd = new();
+    private MudForm? _form;
+    private bool _success;
+
+    [InjectScoped]
+    public AppDbContext Context { get; set; } = null!;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        _webhooks = await Context.UserWebhooks.ToListAsync();
+        StateHasChanged();
+    }
+
+    private void OnDelete(UserWebhook target)
+    {
+        if (_webhooks!.Contains(target))
+            _webhooksToDelete.Add(target);
+        
+        _webhooks.Remove(target);
+        StateHasChanged();
+    }
+
+    private void OnAdd()
+    {
+        var target = new UserWebhook { Url = string.Empty};
+        _webhooks?.Add(target);
+        _webhooksToAdd.Add(target);
+    }
+
+    private async Task SaveChanges()
+    {
+        _isLoading = true;
+        StateHasChanged();
+        
+        foreach (var target in _webhooksToDelete)
+        {
+            Context.UserWebhooks.Remove(target);
+        }
+        
+        foreach (var target in _webhooksToAdd)
+        {
+            Context.UserWebhooks.Add(target);
+        }
+        
+        await Context.SaveChangesAsync();
+        _webhooks = await Context.UserWebhooks.ToListAsync();
+        
+        _webhooksToAdd.Clear();
+        _webhooksToDelete.Clear();
+        _isLoading = false;
+        
+        StateHasChanged();
+    }
+
+}

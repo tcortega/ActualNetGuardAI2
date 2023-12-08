@@ -1,0 +1,27 @@
+﻿@using NetGuardAI.Core.Persistence.Entities
+@using System.Net
+
+<div class="flex flex-row gap-2">
+    <MudTextField @bind-Value="ScanTarget.IpRange" Required="true" Label="IP / MASCARA SUBNET" Variant="Variant.Outlined" Validation="@(new Func<string, string?>(ValidateIpRange))"/>
+    <MudIconButton Icon="@Icons.Material.Filled.Delete" OnClick="HandleDelete" Variant="Variant.Text" Color="Color.Error" Size="Size.Medium"/>
+</div>
+
+@code {
+
+    [EditorRequired]
+    [Parameter]
+    public ScanTarget ScanTarget { get; set; } = null!;
+    
+    [Parameter]
+    public Action<ScanTarget>? OnDelete { get; set; }
+
+    public string? ValidateIpRange(string value)
+    {
+        return !IPNetwork.TryParse(value, out _) ? "Invalid IP/CIDR" : null;
+    }
+    
+    void HandleDelete()
+    {
+        OnDelete?.Invoke(ScanTarget);
+    }
+}

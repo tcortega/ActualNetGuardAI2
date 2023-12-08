@@ -1,0 +1,3 @@
+CREATE USER hangfire WITH PASSWORD '6fehjWyx!eRBpCR';
+CREATE DATABASE Hangfire WITH OWNER = hangfire;
+GRANT ALL PRIVILEGES ON DATABASE Hangfire TO hangfire;

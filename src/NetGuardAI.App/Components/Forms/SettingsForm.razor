@@ -1,0 +1,57 @@
+﻿@inherits BlazorComponentBase
+@using NetGuardAI.Core.Persistence
+@using NetGuardAI.Core.Persistence.Entities
+@using Microsoft.EntityFrameworkCore
+
+<MudPaper>
+    @if (_settings is null)
+    {
+        <div class="w-full h-4 p-16 mx-auto">
+            <MudProgressLinear Indeterminate="true"/>
+        </div>
+    }
+    else
+    {
+        <MudForm @ref="_form" @bind-IsValid="@_success">
+            <MudContainer class="flex flex-col gap-2 p-6">
+                <div class="flex flex-row gap-8">
+                    <div class="flex-col w-full">
+                        <MudText>Taxa de Escaneamento</MudText>
+                        <MudNumericField @bind-Value="_settings.MasscanRate" Required="true" Min="1" Variant="Variant.Outlined"/>
+                    </div>
+
+                    <div class="flex-col w-full">
+                        <MudText>Paralelismo do Nmap</MudText>
+                        <MudNumericField @bind-Value="_settings.NmapConcurrencyLimit" Required="true" Min="1" Variant="Variant.Outlined"/>
+                    </div>
+                </div>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true" Disabled="@(!_success)" OnClick="SaveChanges">Salvar</MudButton>
+            </MudContainer>
+        </MudForm>
+    }
+</MudPaper>
+
+@code {
+    private ScanSettings? _settings;
+    private bool _isLoading;
+    private MudForm _form = null!;
+    private bool _success = false;
+    
+    [InjectScoped]
+    public AppDbContext Context { get; set; } = null!;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        _settings = await Context.ScanSettings.FirstAsync();
+        StateHasChanged();
+    }
+
+    private async Task SaveChanges()
+    {
+        _isLoading = true;
+        await Context.SaveChangesAsync();
+        _isLoading = false;
+    }
+
+}

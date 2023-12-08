@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  db:
+    container_name: netguard-db
+    image: postgres
+    hostname: netguard-db
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'pgsqldata-netguard:/var/lib/postgresql/data'
+      - ./init-hangfire-db.sql:/docker-entrypoint-initdb.d/db.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: P4$$$$w0rd
+      POSTGRES_DB: NetGuardAI
+    restart: unless-stopped
+
+volumes:
+  pgsqldata-netguard:

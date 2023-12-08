@@ -1,0 +1,26 @@
+﻿@page "/settings"
+@attribute [Authorize]
+
+<PageTitle>Configurações</PageTitle>
+
+<MudContainer Class="my-10" MaxWidth="MaxWidth.False">
+    <MudGrid>
+        <MudItem xs="12" md="12" lg="12">
+            <MudText Typo="Typo.h6">Configurações</MudText>
+        </MudItem>
+        <MudItem xs="12" md="12" lg="12">
+            <SettingsForm/>
+        </MudItem>
+        <MudItem xs="12" md="6" lg="6">
+            <IPRangeForm/>
+        </MudItem>
+        <MudItem xs="12" md="6" lg="6">
+            <PortRangeForm/>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+@* <h3>Settings</h3> *@
+@* *@
+@* @code { *@
+@*      *@
+@* } *@

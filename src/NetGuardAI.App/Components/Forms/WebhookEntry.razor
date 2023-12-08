@@ -1,0 +1,22 @@
+﻿@using NetGuardAI.Core.Persistence.Entities
+@using System.ComponentModel.DataAnnotations
+
+<div class="flex flex-row gap-2">
+    <MudTextField @bind-Value="Webhook.Url" Required="true" Label="URL" Variant="Variant.Outlined" Validation="@(new UrlAttribute {ErrorMessage = "The Webhook URL is invalid."})" />
+    <MudIconButton Icon="@Icons.Material.Filled.Delete" OnClick="HandleDelete" Variant="Variant.Text" Color="Color.Error" Size="Size.Medium"/>
+</div>
+
+@code {
+
+    [EditorRequired]
+    [Parameter]
+    public UserWebhook Webhook { get; set; } = null!;
+    
+    [Parameter]
+    public Action<UserWebhook>? OnDelete { get; set; }
+
+    void HandleDelete()
+    {
+        OnDelete?.Invoke(Webhook);
+    }
+}
